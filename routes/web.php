@@ -110,7 +110,7 @@ Route::get('getDataOrderIndexDelivery', [
     'uses' => 'orderController@indexDataDelivery',
     'as' => 'ajax.get.data.order.index.delivery'
 ]);
-Route::get('/order/deleteConfirm/{id}', 'sectorController@destroyModal' );
+Route::get('/order/deleteConfirm/{id}', 'orderController@destroyModal' );
 
 });
 

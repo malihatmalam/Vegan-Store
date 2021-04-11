@@ -252,7 +252,7 @@ class orderController extends Controller
         $order->delivery()->delete();
         $order->delete();
 
-        return redirect(route('order.index'))->with(['success' => 'order Telah Dihapus']);
+        return redirect(route('order.index'))->with(['success' => 'Pesanan Telah Dihapus']);
     }
     
     
