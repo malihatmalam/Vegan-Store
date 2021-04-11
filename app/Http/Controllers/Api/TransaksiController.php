@@ -100,6 +100,7 @@ class TransaksiController extends Controller
             $transaction_detail = Order_detail::create([
                 'order_id' => $transaction->id,
                 'product_id' => $product['id'],
+                'product_name' => $product['name'],
                 'price' => $product['price'],
                 'qty' => $product['qty'],
                 'total' => $product['price'] * $product['qty'] ,

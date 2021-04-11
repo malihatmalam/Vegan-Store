@@ -181,7 +181,7 @@
      </div>
      {{-- END Inti --}}
 
-     @include('sectors.modal')
+     @include('orders.modal')
 
 </main>
 @endsection

@@ -213,10 +213,17 @@ class orderController extends Controller
         $order = Order::with([
         'customer',
         'sector',
-        'orderDetail'])
+        'orderDetail.product'])
         ->find($id); 
 
         return view('orders.show', compact('order'));
+    }
+
+    public function edit($id)
+    {
+        $order = Order::find($id); 
+
+        return view('orders.edit', compact('order'));
     }
 
 
@@ -229,9 +236,10 @@ class orderController extends Controller
         // UPDATE ORDER 
         $order = Order::find($id);
         $order->status = $request->status;
+        $order->note = $request->note;
         $order->save();
 
-        return redirect(route('order.index'))->with(['success' => 'Status Order telah di Ubah menjadi '.$order->status]);
+        return redirect(route('order.index'))->with(['success' => 'Status Order telah diperbaharui dan di Ubah menjadi '.$order->status]);
     }
 
     
