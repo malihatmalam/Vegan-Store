@@ -25,7 +25,7 @@
                 <div class="sidebar-user-material-body card-img-top">
                     <div class="card-body text-center">
                         <a href="#">
-                            <img src="{{ asset('admin/assets/img/avatars/6.jpg') }}"
+                            <img src="{{ asset('user.png') }}"
                                 class="img-fluid rounded-circle shadow-2 mb-3" width="80" height="80" alt="">
                         </a>
                         <h4 class="mb-0 text-white text-shadow-dark"><strong>{{ auth()->user()->name }}</strong></h4>
@@ -84,11 +84,10 @@
 
                         {{-- Dashboard --}}
                         <li class="nav-item">
-                            <a href="index.html" class="nav-link active">
+                            <a href="{{ route('dashboard') }}" class="nav-link active">
                                 <i class="icon-home4"></i>
                                 <span>
                                     Dashboard
-                                    <span class="d-block font-weight-normal opacity-50">No active orders</span>
                                 </span>
                             </a>
                         </li>
@@ -96,14 +95,14 @@
 
                         {{-- Product --}}
                         <li class="nav-item">
-                            <a href="{{ route('product.index') }}" class="nav-link"><i class="icon-copy"></i>
+                            <a href="{{ route('product.index') }}" class="nav-link"><i class="icon-store"></i>
                                 <span>Produk</span></a>
                         </li>
                         {{-- END Product --}}
 
                         {{-- Category --}}
                         <li class="nav-item">
-                            <a href="{{ route('category.index') }}" class="nav-link"><i class="icon-copy"></i>
+                            <a href="{{ route('category.index') }}" class="nav-link"><i class="icon-grid3"></i>
                                 <span>Kategori</span></a>
                         </li>
                         {{-- END Category --}}
@@ -117,7 +116,7 @@
                         </li>
                         {{-- Order --}}
                         <li class="nav-item">
-                            <a href="/order" class="nav-link"><i class="icon-copy"></i> <span>Data Pesanan</span></a>
+                            <a href="/order" class="nav-link"><i class="icon-basket"></i> <span>Data Pesanan</span></a>
                         </li>
                         {{-- END Order --}}
                         <!-- /Order -->
@@ -129,13 +128,13 @@
                         </li>
                         {{-- Delivery --}}
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="icon-copy"></i> <span>Data Pengiriman</span></a>
+                            <a href="/delivery" class="nav-link"><i class="icon-truck"></i> <span>Data Pengiriman</span></a>
                         </li>
                         {{-- END Delivery --}}
 
                         {{-- Courir --}}
                         <li class="nav-item">
-                            <a href="{{ route('courir.index') }}" class="nav-link"><i class="icon-copy"></i> <span>Data
+                            <a href="{{ route('courir.index') }}" class="nav-link"><i class="icon-vcard"></i> <span>Data
                                     Kurir</span></a>
                         </li>
                         {{-- END Courir --}}
@@ -148,7 +147,7 @@
                         </li>
                         {{-- Customer --}}
                         <li class="nav-item">
-                            <a href="{{ route('customer.index') }}" class="nav-link"><i class="icon-copy"></i>
+                            <a href="{{ route('customer.index') }}" class="nav-link"><i class="icon-users"></i>
                                 <span>Pelanggan</span></a>
                         </li>
                         {{-- END Customer --}}
@@ -161,7 +160,7 @@
                         </li>
                         {{-- Sector --}}
                         <li class="nav-item">
-                            <a href="{{ route('sector.index') }}" class="nav-link"><i class="icon-copy"></i>
+                            <a href="{{ route('sector.index') }}" class="nav-link"><i class="icon-earth"></i>
                                 <span>Sektor</span></a>
                         </li>
                         {{-- END Sector --}}

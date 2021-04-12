@@ -2,9 +2,9 @@
     <!-- Main navbar -->
 	<div class="navbar navbar-expand-md navbar-dark bg-indigo">
         {{-- Brand --}}
-		<div class="navbar-brand wmin-200">
-			<a href="index.html" class="d-inline-block">
-				<img src="{{ asset('global_assets/images/logo_light.png')}}" alt="">
+		<div class="wmin-200">
+			<a class="d-inline-block">
+				<img width="250px" src="{{ asset('global_assets/images/vegan_store_logo.png')}}" alt="">
 			</a>
 		</div>
         {{-- END Brand --}}
@@ -36,7 +36,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown dropdown-user">
 					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-						<img src="{{ asset('admin/assets/img/avatars/6.jpg') }}" class="rounded-circle mr-2" height="34" alt="Admin Image">
+						<img src="{{ asset('user.png') }}" class="rounded-circle mr-2" height="34" alt="Admin Image">
 						<span>{{ auth()->user()->name }}</span>
 					</a>
 					

@@ -11,6 +11,8 @@
   <meta name="description" content="Vegan Store - Belanja Mudah dari Rumah">
   <meta name="author" content="Vegan Store">
   <meta name="keyword" content="aplikasi jual sayur-mayur dan kebutuhan pokok">
+  <meta name="csrf-token" content="{{ csrf_token() }}" />
+  <link rel="icon" type="image/png" sizes="96x96" href="{{asset('admin_2/assets/images/vegan_store_logo.png')}}">
 
   {{-- JUDUL --}}
   @yield('title')
@@ -23,6 +25,11 @@
   <link href="{{ asset('global_assets/sub_assets/css/layout.min.css') }}" rel="stylesheet" type="text/css">
   <link href="{{ asset('global_assets/sub_assets/css/components.min.css') }}" rel="stylesheet" type="text/css">
   <link href="{{ asset('global_assets/sub_assets/css/colors.min.css') }}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('global_assets/sub_assets_2/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('global_assets/sub_assets_2/css/bootstrap_limitless.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('global_assets/sub_assets_2/css/layout.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('global_assets/sub_assets_2/css/components.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{ asset('global_assets/sub_assets_2/css/colors.min.css')}}" rel="stylesheet" type="text/css">
   <!-- /global stylesheets -->
 </head>
 
@@ -60,20 +67,9 @@
 
       <div class="navbar-collapse collapse" id="navbar-footer">
         <span class="navbar-text">
-          &copy; 2015 - 2018. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov"
-            target="_blank">Eugene Kopyov</a>
+          &copy; 2021. <a >Vegan Store</a> by <a 
+            target="_blank">Vegan Store Team</a>
         </span>
-
-        <ul class="navbar-nav ml-lg-auto">
-          <li class="nav-item"><a href="https://kopyov.ticksy.com/" class="navbar-nav-link" target="_blank"><i
-                class="icon-lifebuoy mr-2"></i> Support</a></li>
-          <li class="nav-item"><a href="http://demo.interface.club/limitless/docs/" class="navbar-nav-link"
-              target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a></li>
-          <li class="nav-item"><a
-              href="https://themeforest.net/item/limitless-responsive-web-application-kit/13080328?ref=kopyov"
-              class="navbar-nav-link font-weight-semibold"><span class="text-pink-400"><i class="icon-cart2 mr-2"></i>
-                Purchase</span></a></li>
-        </ul>
       </div>
     </div>
   </footer>
@@ -101,10 +97,11 @@
 	<script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
 	<script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/core.min.js') }}"></script>
 	<script src="{{ asset('global_assets/js/plugins/forms/inputs/typeahead/typeahead.bundle.min.js') }}"></script>
-	
+	<script src="{{ asset('global_assets/js/plugins/forms/wizards/steps.min.js')}}"></script>
   
   <script src="{{ asset('global_assets/sub_assets/js/app.js') }}"></script>
-  <script src="{{ asset('global_assets/js/demo_pages/dashboard.js') }}"></script>
+  <script src="{{ asset('global_assets/sub_assets_2/js/app.js')}}"></script>
+	{{-- <script src="{{ asset('global_assets/js/demo_pages/form_wizard.js')}}"></script> --}}
   <!-- /theme JS files -->
 
   <!-- Datatable JS files -->

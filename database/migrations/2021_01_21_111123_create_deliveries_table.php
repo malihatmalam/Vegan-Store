@@ -22,7 +22,7 @@ class CreateDeliveriesTable extends Migration
             // Atribute status
             $table->string('status'); // isi dari status == Delivery, Success
             // Atribute catatan pemesanan
-            $table->text('note');
+            $table->text('note')->nullable();
             // Atribute tanggal kirim
             $table->date('delivery_date');
             $table->timestamps();

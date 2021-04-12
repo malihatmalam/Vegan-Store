@@ -2,7 +2,7 @@
 <html lang="en" class="fullscreen-bg">
 
 <head>
-	<title>Ternak Pak Abdullah | Regristasi</title>
+	<title>Vegan Store Management | Regristrasi</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -18,7 +18,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin_2/assets/img/apple-icon.png')}}">
-	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('admin_2/assets/images/Logo Ternak Singel.png')}}">
+	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('admin_2/assets/images/vegan_store_logo.png')}}">
 </head>
 
 <body>
@@ -30,8 +30,8 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<div class="logo text-center"><img src="{{asset('admin_2/assets/images/Logo Ternak Coba.png')}}" width="150" alt="Ternak Pak Abdullah Logo"></div>
-                                <p class="lead">Regristasi Akun Manajemen Fresh Pack</p>
+								<div class="logo text-center"><img src="{{asset('admin_2/assets/images/logo.png')}}" width="150" alt="Vegan Store Logo"></div>
+                                <p class="lead">Regristasi Akun Manajemen Vegan Store</p>
 							</div>
                             <form class="form-auth-small" action="/postregistrasi" method="POST" >
                                 @csrf
@@ -78,7 +78,7 @@
 					<div class="right">
 						<div class="overlay"></div>
 						<div class="content text">
-							<h1 class="heading"><b>Manajemen Fresh Pack</b></h1>
+							<h1 class="heading"><b>Manajemen Vegan Store</b></h1>
 							<p><b>Silahkan Masuk</b></p>
 						</div>
 					</div>

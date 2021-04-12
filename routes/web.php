@@ -26,7 +26,22 @@ Route::get('/delivery', function () {
 Route::group(['middleware'=>'auth'],function(){
 
 // Dashboard
-Route::get('/', 'userController@dashboard');
+Route::get('/', 'adminController@dashboard')->name('dashboard');
+
+Route::get('/process/{id}', 'adminController@praProcess')->name('pra.process');
+Route::post('/getprocess/{id}', 'adminController@process')->name('process');
+
+Route::get('/delivery_success/{id}', 'adminController@modalDeliverySuccess')->name('delivery');
+Route::post('/get_delivery_success/{id}', 'adminController@deliverySuccess')->name('delivery.success');
+
+Route::get('getDataOrderDashboardWaiting', [
+    'uses' => 'adminController@orderData',
+    'as' => 'ajax.get.data.order.dashboard.waiting'
+]);
+Route::get('getDataDeliveryDashboardProcess', [
+    'uses' => 'adminController@deliveryData',
+    'as' => 'ajax.get.data.delivery.dashboard.process'
+]);
 
 // PRODUCT 
 // Merangkum route store, index, update, delete, show dan create. 

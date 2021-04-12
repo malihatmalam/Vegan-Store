@@ -30,6 +30,7 @@ class deliveryController extends Controller
             ->select([
                 'id',
                 'invoice',
+                'delivery_code',
                 'order_id',
                 'courir_id',
                 'delivery_date',
@@ -78,6 +79,7 @@ class deliveryController extends Controller
             ->select([
                 'id',
                 'invoice',
+                'delivery_code',
                 'order_id',
                 'courir_id',
                 'delivery_date',
@@ -133,6 +135,12 @@ class deliveryController extends Controller
         return view('deliveries.show', compact('delivery'));
     }
 
+    public function edit($id)
+    {
+        $delivery = Delivery::find($id); 
+
+        return view('deliveries.edit', compact('delivery'));
+    }
 
     public function update(Request $request, $id)
     {
@@ -152,9 +160,7 @@ class deliveryController extends Controller
     
     public function destroy($id)
     {
-        $delivery = Delivery::with([
-            'orderDetail'])
-            ->find($id);
+        $delivery = Delivery::find($id);
         $delivery->delete();
         
         return redirect(route('delivery.index'))->with(['success' => 'Pengiriman Telah Dihapus']);
