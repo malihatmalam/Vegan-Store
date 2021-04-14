@@ -35,8 +35,10 @@ class HistoryTrcController extends Controller
      public function process($customer_id){
 
           $transaction = Order::where('customer_id', $customer_id)
-          ->where('status', 'Wait')
-          ->orwhere('status', 'Delivery')
+          ->where(function ($query) {
+               $query->where('status', 'Wait')
+                    ->orwhere('status', 'Delivery');
+           })
           ->orderBy('created_at', 'DESC')
           ->get();
 
