@@ -25,7 +25,7 @@ class SectorController extends Controller
           return response()->json([
                'Status' => 'Success',
                'Message' => 'Daftar Area (Sector Detail)',
-               'Categories' => $sectorDetail
+               'SectorDetails' => $sectorDetail
           ]);
      }
      
