@@ -40,7 +40,7 @@ class TransaksiController extends Controller
         $sector = Sector::with('sector_detail')->find($requset->sector_id);
 
         // Scheduled
-        if ($requset->scheduled == true) {
+        if ($requset->scheduled == 1) {
             // Bila berlangganan 
             $scheduled = "002";
         }
