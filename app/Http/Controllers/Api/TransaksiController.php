@@ -80,7 +80,7 @@ class TransaksiController extends Controller
             'scheduled' => $requset->scheduled,
             'status' => "Wait",
             'sector_id' => $requset->sector_id,
-            'total' => $requset->subtotal + $delivery_price,
+            'total' => $requset->subtotal + $requset->delivery_price,
             'paymethod' => $requset->paymethod,
         ]);
         $data_transaction = array_merge($requset->all(), [
