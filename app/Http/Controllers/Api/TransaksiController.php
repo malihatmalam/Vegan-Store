@@ -71,7 +71,7 @@ class TransaksiController extends Controller
             'useplastic' => $requset->useplastic,
             'subtotal' => $requset->subtotal,
             'total_item' => $requset->total_item,
-            'delivery_price' => $delivery_price,
+            'delivery_price' => $requset->delivery_price,
             'delivery_date' => $requset->delivery_date,
             'delivery_time' => $requset->delivery_time,
             'note' => $requset->note,
